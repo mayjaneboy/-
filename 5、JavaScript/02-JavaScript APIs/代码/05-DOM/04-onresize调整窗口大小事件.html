@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var div = document.querySelector('div');
+            /* window.onresize是调整窗口大小加载事件
+            只要窗口大小发生像素变化，就会触发这个事件。
+            利用这个事件可以完成相应式布局。 */
+            window.addEventListener('resize', function () {
+                console.log(window.innerWidth);
+                /* window.innerWidth 当前视口的宽度 */
+                console.log('变化了');
+                if (window.innerWidth <= 800) {
+                    div.style.display = 'none';
+                } else {
+                    div.style.display = 'block';
+                }
+
+            })
+        })
+    </script>
+    <div></div>
+</body>
+
+</html>

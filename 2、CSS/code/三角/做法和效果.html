@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box1 {
+        width: 0;
+        height: 0;
+        border-top: 10px solid gainsboro;
+        border-bottom: 10px solid deepskyblue;
+        border-left: 10px solid deeppink;
+        border-right: 10px solid darkseagreen;
+    }
+
+    .box2 {
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        /* transparent是为了让其他没有设置颜色的部分透明 */
+        /* 没有solid就看不见 */
+        border-top-color: dodgerblue;
+        margin: 100px auto;
+    }
+
+    .jd {
+        width: 120px;
+        height: 240px;
+        background-color: gainsboro;
+        position: relative;
+    }
+
+    .jd span {
+        position: absolute;
+        /* 绝对定位才能在父盒子上面显示 */
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        /* 照顾兼容性 */
+        border: 15px solid transparent;
+        border-bottom-color: aquamarine;
+
+        right: 0px;
+        top: -30px;
+        /* 这个top值理论应该上移两个border的宽度，因为span其他三个三角只是透明了，实际仍然存在 */
+        /* 但实际上，上移两个border之后，sapn和jd之间又有一个小缝隙,因为span的border并不是15，而是14.4 */
+        /* top: -28.8px; */
+        /* top: -25px; 呢？*/
+    }
+</style>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="jd">
+        <span></span>
+    </div>
+</body>
+
+</html>

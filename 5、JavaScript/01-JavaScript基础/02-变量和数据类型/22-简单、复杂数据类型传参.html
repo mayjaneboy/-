@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 简单数据类型 null  返回的是一个空的对象  object 
+        var timer = null;
+        console.log(typeof timer);
+        // 如果有个变量我们以后打算存储为对象，暂时没想好放什么，可以先放null 
+        // 1. 简单数据类型 存放在栈里 里面直接开辟一个空间存放值
+        // 2. 复杂数据类型 首先在栈里存放地址（用十六进制表示），然后这个地址指向堆里面的数据
+
+
+        // 简单数据类型传参
+        function fn(a) {
+            a++;
+            console.log(a);//11
+        }
+        var x = 10;
+        fn(x);
+        console.log(x);//10
+        /* 只是把变量的值传递过去了，在函数中操作的是形参的值
+        这是两个栈中存放的两个数据，
+        所以实参的值并不会改变 */
+
+        // 复杂数据类型传参
+        function Person(name) {
+            this.name = name;
+        }//构造函数，返回一个对象
+
+        function f1(x) { // x = p
+            console.log(x.name); // 刘德华   
+            x.name = "张学友";
+            console.log(x.name); // 张学友
+        }
+
+        var p = new Person("刘德华");//用构造函数创建的对象
+        console.log(p.name); // 刘德华 
+        f1(p);
+        console.log(p.name); // 张学友
+        /* 复杂类型数据存储在堆中，变量名存储的是数据在堆中的地址
+        传参时，把地址复制给形参，形参通过地址访问到的数据和实参是一个东西 */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

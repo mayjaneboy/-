@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: gainsboro;
+            width: 300px;
+            height: 200px;
+            border-width: 10px;
+            border-style: dashed;
+            border-color: deepskyblue;
+            /* 复合写法 border:width style color顺序可以变 */
+            /* 也可以分开设置边框的四条线 bordeer-top/bottom/left/right */
+            border-collapse: collapse;
+            /* 把相邻的边框合并在一起 */
+            /* 边框可以在块元素中设置，也可以在表格table标签中，table里的th、td中设置 */
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            /* padding内边距 */
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            /* margin外边距 */
+            text-align: center;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        .son {
+            width: 1000px;
+            height: 200px;
+            background-color: gainsboro;
+            margin-top: 20px;
+        }
+
+        .otherfather {
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>border-width border-style border-color</p>
+        <p>border-collapse合并边框</p>
+        <p>padding-left/right/top/bottom</p>
+        <p>复合写法 padding:上 右 下 左 顺序不能变</p>
+    </div>
+    <div class="box">
+        <p>margin-left/right/top/bottom</p>
+        <p>盒子设定了宽度时,左右值设为auto可以实现块元素水平居中</p>
+        <img src="image/logo/logo.gif" alt="">
+        <p>给父标签设置text-align: center;属性，可以实现盒子内的行内元素和行内块元素水平居中</p>
+    </div>
+    <div class="father">
+        <div class="son">
+            <p>外边距塌陷问题</p>
+            <p>子块未能正确向下移20px</p>
+        </div>
+    </div>
+    <div class="otherfather">
+        <div class="son">
+            <p>在父块内设置 overflow: hidden; 后</p>
+            <p>子块正确向下移20px</p>
+        </div>
+        <p>实际我觉得，外边距的意思是 被上一个块元素的最下面位置排斥一个外边距的距离。
+            而嵌套的子块仍是相对于位置上的上一个块元素来被排斥的，而不是相对于父块。
+            而设置了 overflow: hidden; 后，就变成相当于父块。</p>
+        <p>但是为什么子块丢失了超出父块的那部分呢？</p>
+    </div>
+</body>
+
+</html>

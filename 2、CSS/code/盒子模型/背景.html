@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(image/logo/logo.gif);
+            /* 添加背景图片，两张背景图片不会重叠 */
+            background-repeat: no-repeat;
+            /* 平铺属性，repeat默认平铺，no-repeat为不平铺 */
+            /* repeat-x/y 按x轴或y轴平铺 */
+            /* 可以同时设置背景颜色和平铺属性，但颜色会压在平铺上 */
+            background-position: center center;
+            /* 图片在背景中的位置，用精确值时先写x位置，再写y位置 */
+            /* 也可以写方位词：center left right top bottom */
+            background-attachment: fixed;
+            /* background-attachment设置背景图片滚动或附着效果 */
+            /* 默认值为scroll为滚动，为fixed为固定 */
+            /* background: rgba(0, 0, 0, 0.2); */
+            /* background: rgba的最后一个参数可以设置背景色半透明效果，取值0到1 */
+            /* 但会使背景图片失去效果 */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="image/logo/logokuang1.png" alt="">
+</body>
+
+</html>

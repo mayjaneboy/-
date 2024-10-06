@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        switch (8) {
+            case 1:
+                console.log('这是1');
+                break;
+            case 2:
+                console.log('这是2');
+                break;
+            case 3:
+                console.log('这是3');
+                break;
+            default:
+                console.log('没有匹配结果');
+        }
+        /* 用法和其他编程语言的switch-case用法相同 */
+        // switch注意事项
+        var num = 1;
+        switch (num) {
+            case 1:
+                console.log(1);
+            case 2:
+                console.log(2);
+            case 3:
+                console.log(3);
+                break;
+        }
+        switch (num) {
+            case 5:
+                console.log(1);
+            case 2:
+                console.log(2);
+            case 3:
+                console.log(3);
+                break;
+        }
+        // num的值 和 case里面的值相匹配的时候是全等 值和数据类型都一样
+        // 如果当前的case里面没有break 则不会退出switch 是继续执行下一个case里面的语句
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

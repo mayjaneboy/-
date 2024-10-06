@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 400px;
+        }
+
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+
+            transition: all 2s;
+
+            /* 让背面的紫色盒子保留立体空间 给父级添加的 */
+            transform-style: preserve-3d;
+            /* 不保留立体空间，.front和.back之间的1pxY轴距离就没有了 */
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+            /* 旋转.box的动画效果 */
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .front {
+            background-color: pink;
+            /* z-index: 1; */
+            /* 未旋转前，由于.back在代码行的下面，所以会显示.back
+            解决方法是给.front设置更高的z轴显示优先级z-index: 1;
+            但是实际上是.front覆盖了.back（先这么理解吧，弹幕说的）
+            在旋转后仍然会覆盖.back所以旋转后仍不会显示.back */
+            /* 解决方法是将.front和.back在Y轴上分开，
+            给.front加1px的移动，.front在Y轴上比.back靠前，
+            所以未旋转前，看到.front
+            而旋转效果是对它俩的父级做的效果，所以他俩都旋转，
+            .back旋转到前面来显示.back */
+            transform: translateZ(1px);
+        }
+
+        .back {
+            background-color: purple;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front">黑马程序员</div>
+        <div class="back">pink老师这里等你</div>
+    </div>
+</body>
+
+</html>

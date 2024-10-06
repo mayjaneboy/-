@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 100px;
+        }
+
+        ul li {
+            float: left;
+            margin: 0 5px;
+            width: 120px;
+            height: 35px;
+            list-style: none;
+            /* box也需要旋转，所以直接给li设置perspective透视属性 
+            里面的子盒子就都有透视效果 */
+            perspective: 500px;
+        }
+
+        .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            /* 保留立体空间 */
+            transform-style: preserve-3d;
+            transition: all .4s;
+        }
+
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+
+        .front,
+        .bottom {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .front {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(17.5px);
+            /* 为什么要给.front设置translateZ属性
+            因为.bottom前扑倒并下移后，.front的站在.bottom的中间
+            因为保留了.bottom的立体空间，所以.front左右会各有一个小短线（.bottom的立体空间）
+            所以必须把.front在Y轴上前移（后移不会消除.bottom的立体空间，不过这又是为什么）
+            这样在旋转的过程中也有更好的动画效果 */
+        }
+
+        .bottom {
+            background-color: purple;
+            /* transform: translateY(17.5px) translateZ(-17.5px) rotateX(-90deg); */
+            transform: translateY(17.5px) rotateX(-90deg);
+            /* 这个x轴一定是负值，设置.bottom为向前扑倒，
+            是因为.bottom里的文字是在向上的
+            可以改成正值看看效果更好理解 */
+            /* 因为3D旋转，XY轴是盒子中点横竖两条线
+            所以设置了向前旋转90度后，.bottom在.frontX轴中线上
+            所以需要向下移动，设置translateY属性 */
+            /* 我们如果有移动 或者其他样式，必须先写我们的移动 */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="front">黑马程序员</div>
+                <div class="bottom">pink老师等你</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">黑马程序员</div>
+                <div class="bottom">pink老师等你</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">黑马程序员</div>
+                <div class="bottom">pink老师等你</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">黑马程序员</div>
+                <div class="bottom">pink老师等你</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">黑马程序员</div>
+                <div class="bottom">pink老师等你</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="front">黑马程序员</div>
+                <div class="bottom">pink老师等你</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>

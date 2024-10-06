@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+        <li>我是li5</li>
+    </ol>
+    <script>
+        var ol = document.querySelector('ol');
+        // 1. firstChild 第一个子节点 不管是文本节点还是元素节点
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+
+        // 2. firstElementChild 返回第一个子元素节点，也就是标签元素节点
+        //有兼容问题
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+
+        //parentNode.children是包含所有标签元素节点的伪数组
+        console.log(ol.children[0]);
+        console.log(ol.children[ol.children.length - 1]);
+        /* 这样子就没有兼容问题还能较方便的获取指定的子标签元素节点 */
+    </script>
+</body>
+
+</html>

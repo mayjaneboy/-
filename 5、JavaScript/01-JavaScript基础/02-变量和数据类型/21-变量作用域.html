@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 全局作用域：整个script标签 或者 整个js文件
+        var num = 10;
+        var num = 30;
+        console.log(num);//30
+
+        // 局部作用域（函数作用域） 在函数内部起作用
+        function fn() {
+            var num = 20;
+            console.log(num);
+        }
+        fn();//20
+        // 全局变量 只有浏览器关闭的时候才会销毁，比较占内存资源
+        // 局部变量 当我们程序执行完毕就会销毁， 比较节约内存资源
+
+        /* 在其他编程语言中,在 if语句、循环语句中创建的变量，仅仅只能在本if 语句、
+        本循环语句中使用。不同于这些编程语言，JS中没有块作用域（{}里定义的变量） */
+        console.log(num);//30
+        if (3 < 5) {
+            var num = 10;
+            /* 在{}里面定义的num覆盖了之前的全局变量 */
+        }
+        /* 这在块外同样有作用力 */
+        /* 所以这个{}里面定义的num是不是也是全局变量 */
+        console.log(num);//10
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

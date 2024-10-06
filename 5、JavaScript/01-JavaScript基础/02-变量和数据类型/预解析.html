@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //变量预解析
+        pity = 617;
+        console.log(pity);// 617
+        var pity;
+        //正常执行，因为解析器提高了变量定义语句，实际是
+        /* var pity;
+        pity = 617;
+        console.log(pity); */
+
+        console.log(num); //undefined
+        var num = 10;
+        //因为解析器不提高赋值
+        // 相当于执行了以下代码
+        // var num;
+        // console.log(num);
+        // num = 10;
+
+
+        //函数预解析
+        funt();
+        function funt() {
+            console.log('函数调用在前，声明在后');//可以执行
+        }
+
+        fun();
+        var fun = function () {
+            console.log('函数调用在前，函数表达式在后');//报错
+
+        }
+        // 若采用函数表达式 则调用必须写在函数表达式的下面
+        // 相当于执行了以下代码
+        // var fun;
+        // fun();
+        // fun = function() {
+        //         console.log(22);
+        // }
+
+        // 1. js引擎运行js分为两步:预解析 代码执行
+        // (1). 预解析 js引擎会把js里面所有的 var变量定义 还有 function函数声明 提升到当前作用域的最前面
+        // (2). 代码执行 按照提升后的代码顺序从上往下执行
+        // 2. 预解析分为 变量预解析（变量提升） 和 函数预解析（函数提升）
+        // (1) 变量提升 就是把所有的变量声明提升到当前的作用域最前面  不提升赋值操作
+        // (2) 函数提升 就是把function的函数声明提升到当前作用域的最前面（不提升函数表达式）
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

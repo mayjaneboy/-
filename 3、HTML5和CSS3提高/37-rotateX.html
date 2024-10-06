@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+            /* perspective设置的值是离人眼的距离
+            这个属性除了能改变盒子成像的大小
+            当设置了3D旋转属性后这个值的大小
+            对3D旋转的效果有什么影响 */
+            /* 这个值为什么没有对成像大小产生影响.... */
+        }
+
+        img {
+            display: block;
+            margin: 100px auto;
+            /* 外边距限制了元素的位置
+            虽然在3D移动后，图片会表现出X和Y轴上的变化
+            但我认为这是3D旋转带来的视觉效果，其本质位置并未变化
+            怎么感觉不加这个外边距，X轴上3D旋转的效果这么怪啊 */
+            transition: all 1s;
+        }
+
+        img:hover {
+            transform: rotateX(45deg);
+            /* 动画效果是在x轴上3D选装，
+            视觉上就是想屏幕里外塌陷 */
+        }
+    </style>
+</head>
+
+<body>
+    <img src="media/pig.jpg" alt="">
+</body>
+
+</html>

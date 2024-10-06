@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nai {}
+
+        /* 使用下面四个伪类链接选择器，要按照link visited hover active的先后顺序声明 */
+        /* a:link选择未访问的链接 */
+        a:link {
+            color: aquamarine;
+            text-decoration: none;
+            /* 线条设置生效 */
+        }
+
+        /* a:visited选择已点击过的链接 */
+        a:visited {
+            color: gray;
+            text-decoration: underline;
+            /* 线条设置不生效 */
+        }
+
+        /* a:hover选择鼠标经过的链接 */
+        a:hover {
+            color: aqua;
+            text-decoration: none;
+            /* 线条设置生效 */
+        }
+
+        /* a active选择鼠标正在按下还没有弹起的链接 */
+        a active {
+            color: green;
+            text-decoration: underline;
+            /* 颜色、线条设置不生效 */
+        }
+
+        .nai:link {
+            /* 链接选择器里的 a ，可以改成类选择器，以选择有特定类的链接设置特定样式 */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https:\\mayjaneboy.top">我的个人主页</a><br>
+    <a href="https:\\wtwlc.top">无糖乌龙茶</a><br>
+    <a href="#">空</a>
+    <a class="nai" href="https:\\baidu.com">百度</a>
+</body>
+
+</html>

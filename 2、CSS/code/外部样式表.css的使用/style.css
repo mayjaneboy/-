@@ -1,0 +1,4 @@
+/* 在.css文件中，之间编写样式，不用在加style标签 */
+div {
+    color: deeppink;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var str = 'mayjaneboy';
+        console.log(str);
+        // 双引号和单引号都可以表示字符串,但是不能混搭
+        //但HTML里的标签里的属性值是用的双引号，所以JS里推荐用单引号。
+        var str = 'may"jane"boy';
+        console.log(str);
+        var str = "may'jane'boy";
+        console.log(str);
+        /* 可以单引号嵌套双引号，也可以双引号嵌套单引号 */
+        /* 不能单嵌套单，不能双嵌套双 */
+
+        // 字符串转义字符  都是用 \ 开头 但是这些转义字符写在引号里面
+        var str = "mayjaneboy\njacknony";
+        console.log(str);
+        /*
+        \n 换行符
+        \\ 斜杠\
+        \' 单引号
+        \" 双引号
+        \t tab缩进
+        \b 空格
+         */
+
+        /* 获取字符串长度 */
+        console.log(str.length);
+        /* 转移字符算一个字符 */
+
+        // 字符串的拼接 +  
+        //字符串和其他类型相拼接，最终的结果是字符串类型
+        console.log('mayjane' + 'boy'); // 字符串'mayjaneboy'
+        console.log('mayjaneboy' + 18); // 'mayjaneboy18'
+        console.log('mayjaneboy' + true); // 'mayjaneboytrue'
+        console.log(12 + 12); // 数字24
+        console.log('12' + 12); // 字符串'1212'
+        var age = 19;
+        // 变量名不能在引号里面，否则会被当成字符串
+        //要通过 + 来和字符串想连接
+        console.log('mayjaneboy' + age + '岁');
+
+        // 根据字符返回位置 str.indexOf('要查找的字符', [起始的位置])
+        var str = '改革春风吹满地，春天来了';
+        console.log(str.indexOf('春'));//2
+        console.log(str.indexOf('春', 3)); //8 从索引号是3的位置开始往后查找
+
+        // 查找字符串"abcoefoxyozzopp"中所有o出现的位置以及次数
+        // 核心算法：先查找第一个o出现的位置
+        // 循环 只要indexOf 返回的结果不是 -1 就继续往后查找
+        // 因为indexOf只能查找到第一个，所以后面的查找，可以是当前索引加1，从而继续查找
+        var str = "oabcoefoxyozzopp";
+        var index = str.indexOf('o');
+        var num = 0;
+        // console.log(index);
+        while (index !== -1) {
+            console.log(index);// 输出'o'的位置
+            num++;
+            index = str.indexOf('o', index + 1);// 往后面找
+            /* 如果找到了，就能进入下一次循环
+            找不到就退出循环 */
+        }
+        console.log('o出现的次数是: ' + num);
+
+        // 根据位置返回字符
+        // str.charAt(index)
+        var str = 'andy';
+        console.log(str.charAt(3));
+        // str[index]
+        console.log(str[0]); // a
+
+        // charCodeAt(index)  返回相应索引号的字符ASCII值
+        console.log(str.charCodeAt(0)); // 97
+
+        // 字符串拼接 str.concat('字符串1','字符串2'....)
+        var str = 'may';
+        console.log(str.concat('jane', 'boy'));
+
+        // 字符串截取 str.substr('截取的起始位置', '截取几个字符');
+        var str1 = 'mayjaneboy';
+        console.log(str1.substr(3, 4));
+
+        // 替换串中的字符 str.replace('被替换的字符', '替换为的字符')  它只会替换匹配到的第一个字符
+        var str = 'andyandy';
+        console.log(str.replace('n', 'b'));
+        // 有一个字符串 'abcoefoxyozzopp'  要求把里面所有的 o 替换为 -
+        var str1 = 'abcoefoxyozzopp';
+        while (str1.indexOf('o') !== -1) {
+            str1 = str1.replace('o', '-');
+        }
+        console.log(str1);
+
+        // 字符串转换为数组 str.split('选取字符串中的某一字符作为分隔符')
+        var str2 = 'may, jane, boy';
+        console.log(str2.split(','));
+        var str3 = 'may&jane&boy';
+        console.log(str3.split('&'));
+        /* 字符串的不可变性指的是里面的值不可变，虽然看上去可以改变内容，
+        但其实是地址变了，在内存中新开辟了一个内存空间。
+        所以要注意字符串占用的内存 */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

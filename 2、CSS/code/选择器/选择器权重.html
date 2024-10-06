@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            color: aqua;
+        }
+
+        .test {
+            color: gainsboro;
+        }
+
+        #demo {
+            color: green;
+        }
+
+        .imp {
+            color: deepskyblue !important;
+        }
+
+        p {
+            color: black;
+        }
+
+        .test li {
+            color: blue;
+        }
+
+        ul li {
+            color: darkred;
+        }
+
+        li {
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="color: red;">
+        <p>继承的优先级最低(不会继承优先级包括!important)</p>
+    </div>
+    <div class="test">优先级:类>标签</div>
+    <div class="test" id="demo">优先级:id>类</div>
+    <div class="test" id="demo" style="color: purple;">优先级:行内样式表>id</div>
+    <div class="imp" id="demo" style="color: purple;">!important优先级最高(可以加在任何选择器样式的后面）</div>
+    <a href="#">链接标签a,是默认有一个标签选择器设置的样式为 蓝色下划线，所以并不会继承父标签的样式</a>
+    <ul>
+        <li>复合选择器权重会叠加 ul li{} > li{}</li>
+    </ul>
+    <ul class="test">
+        <li>.test li{} > ul li{}</li>
+    </ul>
+
+</body>
+
+</html>

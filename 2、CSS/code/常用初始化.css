@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* 内外边距清零 */
+}
+
+em,
+i {
+    font-style: normal;
+    /* em和i斜体的文字不倾斜 */
+}
+
+li {
+    list-style: none;
+    /* 清除前面的小圆点 */
+}
+
+img {
+    border: 0;
+    /* 照顾低版本浏览器，如果图片外面包含了链接会有边框的问题 */
+    vertical-align: middle;
+    /* 取消图片为了和文本底线对齐而预留的空白缝隙 */
+}
+
+button {
+    cursor: pointer;
+    /* 当鼠标经过按钮时，变成小手 */
+}
+
+a {
+    text-decoration: none;
+    /* 去掉链接下划线 */
+}

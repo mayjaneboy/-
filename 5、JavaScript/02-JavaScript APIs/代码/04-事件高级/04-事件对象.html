@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="/images/事件对象的属性和方法.png" alt="">
+    </div>
+    <script>
+        // 事件对象
+        /* eventTarget.onclick = function(event) {}
+           eventTarget.addEventListener('click', function(event) {})
+           这个 event 就是事件对象 */
+        /* 官方解释：event对象代表事件的状态，比如键盘按键的状态、鼠标的位置、鼠标按钮的状态。
+           简单理解：事件发生后，跟事件相关的一系列信息数据的集合都放到这个对象里面，
+           这个对象就是事件对象event，它有很多属性和方法。 */
+        /* 这个 event 是个形参，不需要传递实参过去。但这个事件对象我们可以自己命名
+        当我们注册事件时，event 对象就会被系统自动创建，并依次传递给事件监听器（事件处理函数）。 */
+
+        var div = document.querySelector('div');
+        div.onclick = function (e) {
+            console.log(e);
+        }
+    </script>
+</body>
+
+</html>

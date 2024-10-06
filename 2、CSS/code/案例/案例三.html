@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1226px;
+            height: 285px;
+            background-color: gainsboro;
+            margin: 0 auto;
+        }
+
+        .box li {
+            width: 296px;
+            height: 285px;
+            background-color: aqua;
+            float: left;
+            margin-right: 14px;
+        }
+
+        .last {
+            margin-right: 0px !important;
+            /* 注意这里只用一个类选择器覆盖上面的选择器，
+            权重不够。也可以改成.box last {} */
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="last">4</li>
+    </ul>
+</body>
+
+</html>

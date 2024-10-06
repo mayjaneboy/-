@@ -1,0 +1,25 @@
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+
+    // 子元素的样式可以直接写到父元素里面
+    a {
+        color: red;
+
+        // 如果有伪类、交集选择器、伪元素选择器 我们内层选择器的前面需要加&
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+.nav {
+    .logo {
+        color: green;
+    }
+
+    &::before {
+        content: "";
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zong {
+            text-align: center;
+            color: darkseagreen;
+        }
+
+        .kuai {
+            text-align: center;
+            color: deepskyblue;
+        }
+
+        a {
+            width: 550px;
+            height: 50px;
+            background-color: aqua;
+            /* 把行内元素转换为块元素 */
+            display: block;
+            text-decoration: none;
+        }
+
+        .inline {
+            width: 300px;
+            height: 200px;
+            display: inline;
+            /* 这样块元素设置的高、宽就不起作用了 */
+        }
+
+        .inlineblock {
+            width: 200px;
+            height: 30px;
+            background-color: gainsboro;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="zong">
+        <p>元素显示模式就是元素（标签）以什么模式显示。一般分为块元素和行内元素两种</p>
+    </div>
+    <div class="kuai">
+        <h4>块元素</h4>
+        <p>块元素(p、h、div、ul、ol、li)独占一行，高度、宽度、边距都可以设置，是一个容器或盒子，里面可以放行内元素和块元素</p>
+        <p>块元素的宽度默认为父级标签的宽度。文字类的块元素(p、h)内不能再放块元素</p>
+    </div>
+
+    <div>
+        <h4>行内元素</h4>
+        <span>行内元素</span> <strong>在一行上可以显示多个</strong>
+        <span>高、宽不能单独设置</span>
+        <span>默认宽度为其本身宽度</span><br>
+        <span>行内元素(除a标签)不能容纳块元素</span>
+        <strong>链接(a标签)里面不能再放链接</strong>
+    </div>
+
+    <div>
+        <h4>行内块元素</h4>
+        <span>行内块元素(img input td)，一行可以有多个</span><br>
+        <span>默认宽度为其本身宽度</span><br>
+        <span>高、宽、边距可以设置</span><br>
+    </div>
+    <a href="https:\\mayjaneboy.top">个人主页(display: block;将行内元素转换成块元素，可以设置高、宽、颜色)</a>
+    <div class="inline">display:inline;将块元素转换为行内元素(这样就不能设置高、宽)</div><br>
+    <span class="inlineblock">display: inline-block;</span>
+    <span class="inlineblock">行内元素转换为行内块元素</span>
+    <span class="inlineblock">就可以设置高、宽</span>
+    <span class="inlineblock">一行上也可以显示多个元素</span>
+</body>
+
+</html>

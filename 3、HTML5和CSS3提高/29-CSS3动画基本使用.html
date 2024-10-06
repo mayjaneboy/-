@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 1.用keyframes定义动画 */
+        @keyframes move {
+
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+
+            /* 结束状态 */
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+
+        /* 在@keyframe中规定某项CSS样式，就能创建由当前样式逐渐改变为新样式的动画效果 */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2. 调用动画 */
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

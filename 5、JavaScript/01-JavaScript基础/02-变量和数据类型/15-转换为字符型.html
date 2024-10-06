@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 1.toString()
+        var num = 10;
+        var str = num.toString();
+        console.log(typeof str);//string str是字符型
+        console.log(typeof num);//number num还是数字型
+
+        // 2. String(变量)   
+        console.log(typeof String(num));//string String(num)是字符型
+        console.log(typeof num);//number num还是数字型
+
+        // 3. + 拼接字符串
+        console.log(typeof (num + ''));//string (num + '')是字符型
+        console.log(typeof num);//number num还是数字型
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: gainsboro;
+            margin: 100px auto 0px auto;
+            /* box-shadow:阴影的x位置 阴影的y位置 虚实程度 阴影大小 
+            阴影颜色 内外部阴影（默认外阴影） */
+            /* 只有前两个是必填项 */
+            /* 最后一个参数，在设置外部阴影时不需要写参数，内阴影时写参数inset */
+            /* 具体可以在浏览器里用F12调着看看 */
+        }
+
+        .box:hover {
+            box-shadow: 10px 10px 5px -3px grey;
+            /* 只在鼠标经过盒子时显示阴影效果 */
+        }
+
+        .otherbox {
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+            margin: 0px auto;
+            /* 盒子阴影不占实际空间 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="otherbox"></div>
+</body>
+
+</html>

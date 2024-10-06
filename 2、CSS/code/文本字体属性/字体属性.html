@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4 {
+            font-family: 宋体;
+            /* font-family设置字体，字体名称为多个字符隔开的一般用引号包含。优先级按字体前后排序 */
+            font-size: 32px;
+            /* font-size设置字号，px为像素 */
+            /* 标题标签比较特殊，需要单独指定文字大小 */
+        }
+
+        .bold {
+            font-weight: bold;
+            /* 加粗效果 */
+        }
+
+        .boldbynumber {
+            font-weight: 500;
+        }
+
+        h2 {
+            font-weight: normal;
+        }
+
+        .ita {
+            /* 设字体样式为斜体 */
+            font-style: italic;
+        }
+
+        .xietienorbal {
+            font-style: normal;
+        }
+
+        div {
+            /* 复合属性必须按照下面的顺序，将多个属性写在一起 */
+            /* font:font-style font-weight font-size/line-height font-family; */
+            /* style和weight和line-height属性可以省略为默认值，size和family必须有 */
+            font: italic 700 16px '宋体';
+        }
+    </style>
+</head>
+
+<body>
+    <h4>mayjaneboy设置字体和字号</h4>
+    <p class="bold">使用bold的加粗效果</p>
+    <p class="boldbynumber">使用数字的加粗效果</p>
+    <h2>normal的效果(可以使本来就加粗的标题不加粗)等于数字400</h2>
+    <p class="ita">使用italic的斜体效果</p>
+    <em>使用em的斜体效果</em><br>
+    <em class="xietienorbal">使用font-style:norbal可以将斜体标签的字体改为不斜体</em>
+    <div>使用复合属性的效果</div>
+</body>
+
+</html>

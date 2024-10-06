@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .map {
+            position: relative;
+            width: 747px;
+            height: 616px;
+            background: url(media/map.png) no-repeat;
+            margin: 0 auto;
+        }
+
+        .bj {
+            position: absolute;
+            top: 227px;
+            right: 193px;
+        }
+
+        .tb {
+            position: absolute;
+            top: 500px;
+            right: 80px;
+        }
+
+        .dottedbj {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+
+        .dottedtb {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+
+        .bj div[class^="bowen"] {
+            /* 属性选择器，选择有以bowen开头的属性的元素 */
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px deepskyblue;
+            /* 波纹效果是用阴影实现的，比用边框效果好 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 使波纹的左上角到父盒子的中心点处 */
+            /* 波纹的父盒子是div.dotted */
+            transform: translate(-50%, -50%);
+            /* 使波纹的中心点到达父盒子的中心点处 */
+            border-radius: 50%;
+
+            animation: bowen 1.5s linear infinite;
+            /* 引入动画bowen 效果时间2s 匀速播放 */
+        }
+
+        .tb div[class^="bowen"] {
+            /* 属性选择器，选择有以bowen开头的属性的元素 */
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px deepskyblue;
+            /* 波纹效果是用阴影实现的，比用边框效果好 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 使波纹的左上角到父盒子的中心点处 */
+            /* 波纹的父盒子是div.dotted */
+            transform: translate(-50%, -50%);
+            /* 使波纹的中心点到达父盒子的中心点处 */
+            border-radius: 50%;
+
+            animation: bowen 1.5s linear infinite;
+            /* 引入动画bowen 效果时间2s 匀速播放 */
+        }
+
+        .bj div.bowen2 {
+            animation-delay: 0.4s;
+        }
+
+        .bj div.bowen3 {
+            animation-delay: 0.8s;
+        }
+
+        .tb div.bowen2 {
+            animation-delay: 0.4s;
+        }
+
+        .tb div.bowen3 {
+            animation-delay: 0.8s;
+        }
+
+        /* 动画序列 */
+        @keyframes bowen {
+            0% {}
+
+            100% {
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+                /* 透明度为0 */
+            }
+
+            /* 这个动画效果用调高宽度和高度来设置，而不用scale来进行缩放
+            是因为scale会使阴影的宽度也变大 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="bj">
+            <div class="dottedbj">
+                <div class="bowen1"></div>
+                <div class="bowen2"></div>
+                <div class="bowen3"></div>
+            </div>
+        </div>
+        <div class="tb">
+            <div class="dottedtb">
+                <div class="bowen1"></div>
+                <div class="bowen2"></div>
+                <div class="bowen3"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

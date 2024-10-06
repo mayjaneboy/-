@@ -1,0 +1,13 @@
+div {
+    width: 100%;
+    /* 一行只放一个 */
+    height: 100px;
+}
+
+div:nth-child(1) {
+    background-color: pink;
+}
+
+div:nth-child(2) {
+    background-color: purple;
+}

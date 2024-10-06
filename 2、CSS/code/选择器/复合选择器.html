@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 用后代选择器把ol里面的li选出来 */
+        ol li {
+            color: deeppink;
+        }
+
+        /* 用子选择器把亲儿子标签选出来 */
+        ul>li {
+            color: aqua;
+        }
+
+        /* 并集选择器 */
+        p,
+        span {
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>父标签 后代标签 {} 后代选择器（可以有多个后代标签）,两个标签可以是任意基础选择器</li>
+    </ol>
+    <ul>
+        <li>父标签>第一下级标签{} 子选择器</li>
+        <li>父标签>第一下级标签{} 子选择器</li>
+        <li><a href="#">处在第二下级标签</a></li>
+    </ul>
+    <p>标签p</p>
+    <span>标签span</span>
+</body>
+
+</html>

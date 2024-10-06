@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: gainsboro;
+            border-radius: 10px;
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: gainsboro;
+            border-radius: 100px;
+        }
+
+        .circlebox {
+            width: 200px;
+            height: 100px;
+            background-color: gainsboro;
+            border-radius: 50px;
+        }
+
+        .radius {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px 20px 30px 40px;
+            /* 左上角 右上角 右下角 左下角 */
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span>border-radius: 10px;设置圆角边框</span><br>
+        <p>将一个半径为10px的圆内切于原来的方体的四个角,取消原来的角</p>
+    </div>
+    <div class="circle"></div>
+    <div class="circlebox"></div>
+    <div class="radius"></div>
+</body>
+
+</html>

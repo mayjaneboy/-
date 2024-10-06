@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div getTime="20" data-index="2" data-list-name="andy"></div>
+    <script>
+        var div = document.querySelector('div');
+
+        div.setAttribute('data-time', 20);
+        /* dataset 是一个集合里面存放了所有以data开头的自定义属性
+        这个新的data-time也出现在dataset里面，代表它添加成功 */
+        console.log(div);
+        console.log(div.getAttribute('data-index'));//2
+        console.log(div.getAttribute('data-list-name'));//andy
+        /* .setAttribute()和.getAttribute()可以对以data-开头的自定义属性进行操作 */
+
+        // h5新增的获取自定义属性的方法 它只能获取data-开头的
+        console.log(div.dataset.getTime);//undefined 
+        //getTime是自定义属性，但它不是以data-开头的
+        console.log(div.dataset);
+        /* 获取dataset里面某一属性的值的方法 */
+        console.log(div.dataset.index);
+        console.log(div.dataset['index']);
+        // 如果dataset的属性命名中有'-'，我们获取的时候采取驼峰命名法
+        console.log(div.dataset.listName);
+        console.log(div.dataset['listName']);
+    </script>
+</body>
+
+</html>

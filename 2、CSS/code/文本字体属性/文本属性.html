@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .align {
+            text-align: center;
+            /* center为居中对齐，right为右对齐，left为左对齐 */
+            /* 想要让图片居中对齐，则是让它的父标签添加水平居中的样式 */
+        }
+
+        .heightcenter {
+            width: 300px;
+            height: 40px;
+            background-color: aqua;
+            line-height: 40px;
+        }
+
+        .decoration {
+            text-decoration: line-through;
+            /* underline为下划线,overline为上划线,line-through为删除线 */
+            /* 默认为none无效果,使用none还可以使默认有下划线的链接取消效果 */
+        }
+
+        .dec-none {
+            text-decoration: none;
+        }
+
+        .indent {
+            /* text-indent: 40px; 缩进40个像素的距离 */
+            text-indent: 2em;
+            /* em为当前元素一个文字的大小 */
+        }
+
+        .hangjianju {
+            line-height: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>默认左对齐</p>
+    <p class="align">使用text-align的对齐效果</p>
+    <p class="align">想要让图片居中对齐，则是让它的父标签添加水平居中的样式</p>
+    <p class="align">
+        <img src="image/me.jpg" alt="">
+    </p>
+    <div class="heightcenter">通过设置行高等于块的高度实现垂直居中</div>
+    <p class="decoration">使用text-decoration实现的下划线,上划线,删除线效果</p>
+    <a href="https://mayjaneboy.top/" class="dec-none">使用none可以使默认有下划线的链接取消效果</a>
+    <p class="indent">使用text-indent设置的文本首行缩进效果</p>
+    <p class="hangjianju">使用line-height改变行间距</p>
+</body>
+
+</html>

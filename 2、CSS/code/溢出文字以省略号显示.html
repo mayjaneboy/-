@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 150px;
+            height: 80px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            white-space: nowrap;
+            /* nowrap：文字显示不开也强制一行内显示 */
+            /* normal自动换行 */
+            overflow: hidden;
+            /* 超出的部分隐藏 */
+            text-overflow: ellipsis;
+            /* 用省略号替代超出部分文字 */
+        }
+
+        .div2 {
+            width: 150px;
+            height: 80px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            white-space: nowrap;
+            /* nowrap：文字显示不开也强制一行内显示 */
+            /* normal自动换行 */
+            overflow: hidden;
+            /* 超出的部分隐藏 */
+        }
+
+        .div3 {
+            width: 150px;
+            height: 80px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            white-space: normal;
+            /* nowrap：文字显示不开也强制一行内显示 */
+            /* normal自动换行 */
+        }
+
+        .div4 {
+            width: 150px;
+            height: 85px;
+            background-color: aquamarine;
+            margin: 100px auto;
+            overflow: hidden;
+            /* 超出的部分隐藏 */
+            text-overflow: ellipsis;
+            /* 用省略号替代超出部分文字 */
+
+            display: -webkit-box;
+            /* 弹性伸缩盒子模型 */
+            -webkit-line-clamp: 4;
+            /* 限制显示在一个块元素中的文本行数 */
+            -webkit-box-orient: vertical;
+            /* 伸缩盒子中的子元素的排列方式 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+        单行文字溢出部分以省略号显示
+    </div>
+    <div class="div2">单行文字溢出部分以省略号显示</div>
+    <div class="div3">单行文字溢出部分以省略号显示</div>
+    <div class="div4">单行文字溢出部分以省略号显示单行文字溢出部分以省略号显示单行文字溢出部分以省略号显示</div>
+</body>
+
+</html>

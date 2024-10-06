@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 0;
+            height: 0;
+            /* 三角是用边框的颜色显示的，因此不需要实际的盒子内容 */
+
+            /* 做不等腰直角三角形的原理是，取消底部和（左或右之一）边框（边框宽的设为零） */
+            /* 用上边框的高度（宽度）大于（左或右之一）边框的宽度，撑出不等腰 */
+            /* 除了目的三角外的边框颜色设透明transparent */
+
+            /* 只保留右边的边框右颜色 */
+            border-color: transparent deepskyblue transparent transparent;
+            border-style: solid;
+            border-width: 100px 50px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

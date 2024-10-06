@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .change {
+            background-color: purple;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="first">文本</div>
+    <script>
+        // 1. 使用 element.style 修改元素样式  适合样式比较少 或者 功能简单的情况
+        var test = document.querySelector('div');
+        test.onclick = function () {
+            // this.style.backgroundColor = 'purple';
+            // this.style.color = '#fff';
+            // this.style.fontSize = '25px';
+            // this.style.marginTop = '100px';
+
+            // 这些修改的样式可以放到一个样式类里面,更改事件源的样式类
+
+            // this.className = 'change';//这种是直接更换了事件源的样式类
+            this.className = 'first change';//也可以采用多类名选择器，后面的样式类覆盖原来的样式类
+        }
+    </script>
+</body>
+
+</html>

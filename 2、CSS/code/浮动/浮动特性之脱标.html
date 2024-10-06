@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxfloat {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: deepskyblue;
+        }
+
+        .boxputong {
+            width: 400px;
+            height: 400px;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxfloat">
+        <p>浮动的盒子在浮动指示的位置</p>
+        <p>其原来的位置会空起来给普通流的盒子用</p>
+        <p>浮动的盒子只会影响浮动后面的普通流,不会影响前面的普通流</p>
+    </div>
+    <div class="boxputong">
+        <p>普通的盒子</p>
+        <p>会占据浮动的盒子原来的位置</p>
+    </div>
+    <!-- 加了浮动属性后，就不需要转换块元素、行内元素和行内块元素，就可以直接设置高宽 -->
+    <!-- 加了浮动属性的块元素，如果没有设置宽度，其宽度根据内容来决定 -->
+</body>
+
+</html>

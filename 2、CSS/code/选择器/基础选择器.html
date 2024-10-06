@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择器{样式} 标签选择器把某一种标签全部选择出来 */
+        p {
+            color: blue;
+            /*文字大小为12像素*/
+            font-size: 15px;
+        }
+
+        /* .class{} 类型选择器定义样式类，在标签中调用可以更改该标签内容的样式 */
+        /* 一个标签可以调用多个样式类，中间用空格，同在一个双引号下 */
+        .red {
+            color: red;
+        }
+
+        .font20 {
+            font-size: 20px;
+        }
+
+        /* #class{} id选择器可以为特定id的元素设定样式 */
+        #pink {
+            color: pink;
+        }
+
+        /* * {}通配符选择器改变页面中的所有元素（标签）内容的样式，不需要被调用 */
+        /* 优先级：id>类>标签>通配符 */
+    </style>
+</head>
+
+<body>
+    <p>使用标签选择器更改样式</p>
+    <p>使用标签选择器更改样式</p>
+    <li class="red">使用类选择器更改样式</li>
+    <div class="red font20">一个标签可以调用多个样式类，中间用空格，同在一个双引号下</div>
+    <div id="pink">id选择器可以为特定id的元素设定样式</div>
+</body>
+
+</html>
